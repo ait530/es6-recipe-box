@@ -1,1 +1,3 @@
-console.log("Connected");
+window.addEventListener('load',function(){
+ console.log('connected');
+});
