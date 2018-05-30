@@ -1,7 +1,6 @@
-let ingredientForm = document.getElementById('recipe-form');
-
-console.log(ingredientForm.id); 
-   
-ingredientForm.addEventListener('click', function () {
-    console.log("Click confirmed");
-});
+const userInput = () => {
+  let userIngredientInput = document.getElementById('recipe-form').value;
+  document.getElementById('addedIngredients').innerHTML = "The user input is: " + userIngredientInput;
+};
+  
+  
