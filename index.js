@@ -1,4 +1,5 @@
-let arrayOfIngredientsData = ['Chicken', 'Noodles', 'Broccoli'];
+const arrayOfIngredientsData = ['Chicken', 'Noodles', 'Broccoli'];
+const ingredientsData = [];
 
 const userIngredientInput = () => {
   let userTextInput = document.getElementById('recipe-form').value;
@@ -14,7 +15,7 @@ const userIngredientInput = () => {
     arrayOfIngredientsData.push(userTextInput);
     console.log(arrayOfIngredientsData);
 
-    afterInitialInput();
+    afterInitialInput(userTextInput);
   }
   else if (userTextInput === '' && arrayOfIngredientsData.length > 3) {
     alert('Please input a recipe item');
@@ -30,6 +31,11 @@ const instructions = () => {
 
 const afterInitialInput = (userTextInput) => {
     console.log(arrayOfIngredientsData.length);
+    const ingredientsData = arrayOfIngredientsData.filter(function(item, index) {
+      if (arrayOfIngredientsData.indexOf(item) == index)
+        return item;
+    });
+    console.log('Filtered Array: ' + ingredientsData);
 };
 
 window.onload = userIngredientInput;
