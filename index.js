@@ -15,21 +15,21 @@ const userIngredientInput = () => {
     arrayOfIngredientsData.push(userTextInput);
     console.log(arrayOfIngredientsData);
 
-    afterInitialInput(userTextInput);
+    afterInput(userTextInput);
   }
   else if (userTextInput === '' && arrayOfIngredientsData.length > 3) {
     alert('Please input a recipe item');
   }
   else  {
-    instructions();
+    startInstructions();
   }
 };
 
-const instructions = () => {
+const startInstructions = () => {
   alert('Welcome to the Recipe Box app! Please enter a recipe item to get started.');
 };
 
-const afterInitialInput = (userTextInput) => {
+const afterInput = (userTextInput) => {
     console.log(arrayOfIngredientsData.length);
     const ingredientsData = arrayOfIngredientsData.filter(function(item, index) {
       if (arrayOfIngredientsData.indexOf(item) == index)
