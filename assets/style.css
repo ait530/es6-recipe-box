@@ -5,9 +5,17 @@ h1.display-4 {
 
 #add-an-ingredient {
   text-align: center;
+
 }
 
+/*#addedIngredients{
+  vertical-align: middle;
+}*/
+
 .my-ingredients{
-  text-align: center;
-  list-style-position: inside;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
