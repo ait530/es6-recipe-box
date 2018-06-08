@@ -3,14 +3,9 @@ const arrayOfIngredientsData = ['Chicken', 'Noodles', 'Broccoli'];
 const userIngredientInput = () => {
   let userTextInput = document.getElementById('recipe-form').value;
   let recipeAddButton = document.getElementById(
-    'recipe-add-button');
-  let addedIngredient = document.getElementById('addedIngredients');
+    'recipe-add-button'); 
 
   if (userTextInput !== '') {
-    let entry = document.createElement('li');
-    entry.appendChild(document.createTextNode(userTextInput));
-    addedIngredient.appendChild(entry);
-  
     arrayOfIngredientsData.push(userTextInput);
     console.log(arrayOfIngredientsData);
 
@@ -31,10 +26,16 @@ const startInstructions = () => {
 
 const afterInput = (userTextInput) => {
     const filteredIngredientsDataArray = [];
+    let addedIngredient = document.getElementById('addedIngredients');
     const ingredientsData = arrayOfIngredientsData.filter(function(item, index) {
       
       if (arrayOfIngredientsData.indexOf(item) == index){
         filteredIngredientsDataArray.push(item);
+
+        let entry = document.createElement('li');
+        entry.appendChild(document.createTextNode(item)); 
+        addedIngredient.appendChild(entry);
+       
       }
       else if (arrayOfIngredientsData.indexOf(item) !== index) {
         return;
