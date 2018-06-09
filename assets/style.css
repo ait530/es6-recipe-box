@@ -8,9 +8,9 @@ h1.display-4 {
 
 }
 
-/*#addedIngredients{
-  vertical-align: middle;
-}*/
+#addedIngredients{
+  padding-top: 25px;
+}
 
 .my-ingredients{
   width: 20%;
