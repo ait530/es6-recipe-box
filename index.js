@@ -1,4 +1,4 @@
-const arrayOfIngredientsData = ['Chicken', 'Noodles', 'Broccoli'];
+const arrayOfIngredientsData = [];
 
 const userIngredientInput = () => {
   let userTextInput = document.getElementById('recipe-form').value;
