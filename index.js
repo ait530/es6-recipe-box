@@ -30,19 +30,23 @@ const afterInput = (userTextInput) => {
     const ingredientsData = arrayOfIngredientsData.filter(function(item, index) {
       
       if (arrayOfIngredientsData.indexOf(item) == index){
-        filteredIngredientsDataArray.push(item);
-
-        let entry = document.createElement('li');
-        entry.appendChild(document.createTextNode(item)); 
-        addedIngredient.appendChild(entry);
-       
+        filteredIngredientsDataArray.push(item); 
       }
       else if (arrayOfIngredientsData.indexOf(item) !== index) {
         return;
-        alert('Please enter a different ingredient');;
+        alert('Please enter a different ingredient');
       }
     });
-    console.log(filteredIngredientsDataArray);
+    
+    console.log(userTextInput);
+    console.log(filteredIngredientsDataArray.slice(-1)[0]);
+
+    let entry = document.createElement('li');
+    if (userTextInput === filteredIngredientsDataArray.slice(-1)[0]){
+      entry.appendChild(document.createTextNode(filteredIngredientsDataArray.slice(-1)[0])); 
+      addedIngredient.appendChild(entry);
+      console.log(filteredIngredientsDataArray);  
+    } 
 };
 
 window.onload = userIngredientInput;
