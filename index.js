@@ -33,14 +33,15 @@ const afterInput = (userTextInput) => {
   })
 
   console.log(userTextInput)
-  console.log(filteredIngredientsDataArray.slice(-1)[0])
+  console.log(filteredIngredientsDataArray.length)
 
   let entry = document.createElement('li')
   if (userTextInput === filteredIngredientsDataArray.slice(-1)[0]) {
     entry.appendChild(document.createTextNode(filteredIngredientsDataArray.slice(-1)[0]))
+      console
     addedIngredient.appendChild(entry)
     console.log(filteredIngredientsDataArray)
-  }
+  } 
 }
 
 window.onload = userIngredientInput
