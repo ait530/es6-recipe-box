@@ -8,9 +8,8 @@ const userIngredientInput = () => {
   if (userTextInput !== '') {
     arrayOfIngredientsData.push(userTextInput)
     console.log(arrayOfIngredientsData)
-
     afterInput(userTextInput)
-  } else if (userTextInput === '' && arrayOfIngredientsData.length > 3) {
+  } else if (userTextInput === '' && arrayOfIngredientsData.length > 0) {
     alert('Please input a recipe item')
   } else {
     startInstructions()
