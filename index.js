@@ -24,7 +24,7 @@ const afterInput = (userTextInput) => {
   const filteredIngredientsDataArray = []
   let addedIngredient = document.getElementById('addedIngredients')
   const ingredientsData = arrayOfIngredientsData.filter(function (item, index) {
-    if (arrayOfIngredientsData.indexOf(item) === index) {
+    if (arrayOfIngredientsData.indexOf(item) === index && arrayOfIngredientsData.indexOf(item) !== filteredIngredientsDataArray.slice(-1)[0] && arrayOfIngredientsData.indexOf(item) !== arrayOfIngredientsData.slice(-1)[0]) {
       filteredIngredientsDataArray.push(item)
     } else if (arrayOfIngredientsData.indexOf(item) !== index) {
       alert('Please enter a different ingredient')
